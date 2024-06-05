@@ -1,0 +1,97 @@
+.subheader {
+  display: flex;
+  justify-content: center;
+  .subheader__container {
+    width: 90%;
+    display: grid;
+    height: 80px;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    .subheader__search {
+      width: fit-content;
+      height: fit-content;
+      display: flex;
+      position: relative;
+      img {
+        cursor: pointer;
+        right: 20px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      input {
+        width: 370px;
+        height: 48px;
+        padding: 0 10px;
+        font-family: $primary-font;
+        border-radius: 8px;
+        border: 1px solid $border-color-1;
+        font-weight: 500;
+        &:focus {
+          outline-color: $border-color;
+        }
+      }
+    }
+    .subheader__actions {
+      place-self: center end;
+      display: flex;
+      gap: 10px;
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .subheader {
+    display: flex;
+    justify-content: center;
+    .subheader__container {
+      width: 90%;
+      display: grid;
+      height: 80px;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      place-items: center;
+      .subheader__empty {
+        display: none;
+      }
+      .subheader__search {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        position: relative;
+        img {
+          cursor: pointer;
+          right: 20px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        input {
+          width: 100%;
+          height: 48px;
+          padding: 0 10px;
+          font-family: $primary-font;
+          border-radius: 8px;
+          border: 1px solid $border-color-1;
+          font-weight: 500;
+          &:focus {
+            outline-color: $border-color;
+          }
+        }
+      }
+      .subheader__actions {
+        place-self: center end;
+        display: flex;
+        gap: 10px;
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}

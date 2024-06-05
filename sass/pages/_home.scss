@@ -1,0 +1,282 @@
+#categories-subheader {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .categories-subheader__container {
+    width: 90%;
+    display: flex;
+    background-color: $surface-color;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    gap: 24px;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .categories-subheader__row {
+      flex: 0 0 auto;
+      width: 170px;
+      height: 48px;
+      position: relative;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        filter: blur(2px);
+        border-radius: 12px;
+      }
+      a {
+        color: $white-color;
+        text-decoration: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+      }
+      .categories-subheader__row-overlay {
+        position: absolute;
+        background-color: $black-color;
+        filter: blur(12px);
+        opacity: 0.2;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 12px;
+      }
+    }
+  }
+}
+
+main {
+  #books {
+    padding: 0 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .books__container {
+      width: 90%;
+      display: grid;
+      gap: 50px;
+      grid-template-columns: 300px 1fr;
+      .book__categories {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        h1 {
+          font-weight: 500;
+          color: $text-color-1;
+          font-size: 24px;
+        }
+        .book__categories-rows {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          .book__categories-row {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 6px;
+            border: 1px solid $border-color-2;
+            align-items: center;
+            height: 40px;
+            position: relative;
+            label {
+              width: 100%;
+              height: 100%;
+              padding-left: 14px;
+              display: flex;
+              align-items: center;
+              font-weight: 500;
+              cursor: pointer;
+            }
+            input {
+              position: absolute;
+              right: 14px;
+              top: 50%;
+              transform: translateY(-50%);
+              cursor: pointer;
+              width: 20px;
+              height: 20px;
+              background-color: $checkbox-color;
+              border-radius: 6px;
+              transition: 0.4s;
+            }
+            input:checked {
+              background-color: $button-color;
+            }
+            input:checked::before {
+              content: "✓";
+              color: white;
+              display: block;
+              text-align: center;
+              line-height: 20px;
+            }
+            input[type="checkbox"] {
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+            }
+          }
+          .category-active {
+            color: $button-color;
+            border-color: $button-color;
+          }
+        }
+        button {
+          cursor: pointer;
+          background-color: transparent;
+          border: none;
+          font-family: $primary-font;
+          font-weight: 500;
+          color: $button-color;
+          transition: 0.4s;
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+      .book__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        .book__product {
+          border-radius: 10px;
+          padding: 8px 10px;
+          background-color: $card-color;
+          display: flex;
+          height: fit-content;
+          border: 2px solid $border-color;
+          flex-direction: column;
+          align-items: center;
+          .book__product-container {
+            width: 173px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            .book__product-image {
+              position: relative;
+              .book__product-actions {
+                position: absolute;
+                top: 8px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                justify-content: space-between;
+                width: 90%;
+                p {
+                  border-radius: 4px;
+                  color: $white-color;
+                  font-size: 12px;
+                  padding: 3px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+                .bestseller {
+                  background-color: $primary-color;
+                }
+                .discount {
+                  background-color: $red-color;
+                }
+                svg {
+                  cursor: pointer;
+                  transition: 0.4s;
+                  fill: $white-color;
+                  &:hover {
+                    fill: $like-color;
+                  }
+                }
+              }
+              img {
+                border-radius: 10px;
+              }
+            }
+            .book__product-content {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              h1 {
+                font-size: 12px;
+              }
+              .book__product-prices {
+                display: flex;
+                justify-content: space-between;
+                align-items: end;
+                .book__product-price {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 2px;
+                  div {
+                    display: flex;
+                  }
+                  .underlined-text {
+                    font-size: 10px;
+                    text-decoration: line-through;
+                  }
+                  .discount {
+                    color: $red-color;
+                    font-weight: 600;
+                  }
+                }
+                .book__product-rate {
+                  display: flex;
+                  align-items: center;
+                  gap: 3px;
+                  span {
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+            button {
+              overflow: hidden;
+              width: 100%;
+              display: flex;
+              opacity: 0;
+              visibility: hidden;
+              height: 0;
+              justify-content: center;
+              align-items: center;
+              gap: 10px;
+              font-family: $primary-font;
+              cursor: pointer;
+              background-color: $button-color;
+              color: $white-color;
+              border: none;
+              border-radius: 4px;
+              transition: 0.4s;
+              border: 1px solid transparent;
+              svg {
+                width: 20px;
+                height: 20px;
+                fill: $white-color;
+                transition: 0.4s;
+              }
+              &:hover {
+                border-color: $button-color;
+                background-color: transparent;
+                color: $button-color;
+                opacity: 0.7;
+                svg {
+                  fill: $button-color;
+                }
+              }
+            }
+            &:hover {
+              button {
+                padding: 17px 30px;
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
