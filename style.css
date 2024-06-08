@@ -138,6 +138,263 @@ body {
   font-family: Poppins;
 }
 
+.product {
+  border-radius: 10px;
+  padding: 8px 0px;
+  background-color: #fcfcfc;
+  display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 2px solid #f2f4f7;
+  flex-direction: column;
+  align-items: center;
+}
+.product .product-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.product .product-container .product-image {
+  width: 100%;
+  position: relative;
+}
+.product .product-container .product-image .product-actions {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+.product .product-container .product-image .product-actions p {
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product .product-container .product-image .product-actions .bestseller {
+  background-color: #69ceff;
+}
+.product .product-container .product-image .product-actions .discount {
+  background-color: #fb4343;
+}
+.product .product-container .product-image .product-actions svg {
+  cursor: pointer;
+  transition: 0.4s;
+  fill: #fff;
+}
+.product .product-container .product-image .product-actions svg:hover {
+  fill: #f24e1e;
+}
+.product .product-container .product-image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.product .product-container .product-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.product .product-container .product-content h1 {
+  font-size: 12px;
+}
+.product .product-container .product-content .product-prices {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.product .product-container .product-content .product-prices .product-price {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.product .product-container .product-content .product-prices .product-price div {
+  display: flex;
+}
+.product .product-container .product-content .product-prices .product-price .underlined-text {
+  font-size: 10px;
+  text-decoration: line-through;
+}
+.product .product-container .product-content .product-prices .product-price .discount {
+  color: #fb4343;
+  font-weight: 600;
+}
+.product .product-container .product-content .product-prices .product-rate {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.product .product-container .product-content .product-prices .product-rate span {
+  font-size: 12px;
+}
+.product .product-container button {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: Poppins;
+  cursor: pointer;
+  background-color: #0b84bc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  transition: 0.4s;
+  border: 1px solid transparent;
+}
+.product .product-container button svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+  transition: 0.4s;
+}
+.product .product-container button:hover {
+  border-color: #0b84bc;
+  background-color: transparent;
+  color: #0b84bc;
+  opacity: 0.7;
+}
+.product .product-container button:hover svg {
+  fill: #0b84bc;
+}
+.product .product-container:hover button {
+  padding: 17px 30px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.section {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section .section__container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 53px;
+}
+.section .section__container .section__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section .section__container .section__top h1 {
+  color: #000;
+  font-size: 34px;
+  font-weight: 400;
+}
+.section .section__container .section__top .section__buttons {
+  display: flex;
+  gap: 16px;
+}
+.section .section__container .section__top .section__buttons button {
+  cursor: pointer;
+  background-color: rgba(227, 222, 222, 0.7215686275);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+.section .section__container .section__top .section__buttons button svg {
+  fill: #0b84bc;
+  transition: 0.4s;
+}
+.section .section__container .section__top .section__buttons button:hover {
+  background-color: #0b84bc;
+}
+.section .section__container .section__top .section__buttons button:hover svg {
+  fill: #fff !important;
+}
+.section .section__container .section__bottom {
+  gap: 32px;
+  scroll-behavior: smooth;
+  display: flex;
+  overflow-x: auto;
+}
+.section .section__container .section__bottom::-webkit-scrollbar {
+  display: none;
+}
+.section .section__container .section__bottom .product {
+  flex: 0 0 auto;
+  width: 300px;
+}
+
+@media screen and (max-width: 1000px) {
+  .section {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section .section__container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 53px;
+  }
+  .section .section__container .section__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  .section .section__container .section__top h1 {
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .section .section__container .section__top .section__buttons {
+    display: flex;
+    gap: 16px;
+  }
+  .section .section__container .section__top .section__buttons button {
+    cursor: pointer;
+    background-color: rgba(227, 222, 222, 0.7215686275);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  .section .section__container .section__top .section__buttons button svg {
+    fill: #0b84bc;
+    transition: 0.4s;
+  }
+  .section .section__container .section__top .section__buttons button:hover {
+    background-color: #0b84bc;
+  }
+  .section .section__container .section__top .section__buttons button:hover svg {
+    fill: #fff !important;
+  }
+  .section .section__container .section__bottom {
+    width: 100%;
+    gap: 32px;
+  }
+  .section .section__container .section__bottom .product {
+    width: 250px;
+  }
+}
 footer {
   display: flex;
   justify-content: center;
@@ -504,6 +761,25 @@ header .header__container #burger-menu {
   display: flex;
   gap: 10px;
 }
+.subheader .subheader__container .subheader__actions div {
+  position: relative;
+}
+.subheader .subheader__container .subheader__actions div span {
+  padding: 5px;
+  top: -10px;
+  right: -10px;
+  position: absolute;
+  display: flex;
+  width: 14px;
+  height: 14px;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 500;
+  background-color: #0b84bc;
+  color: #fff;
+  border-radius: 50%;
+}
 .subheader .subheader__container .subheader__actions img {
   width: 24px;
   height: 24px;
@@ -575,7 +851,7 @@ header .header__container #burger-menu {
   width: 100%;
   display: flex;
   align-items: center;
-  height: 700px;
+  height: 100vh;
 }
 #auth .auth__container .auth__logo {
   height: 100%;
@@ -967,34 +1243,37 @@ header .header__container #burger-menu {
   border-radius: 12px;
 }
 
-main #books {
+#books {
   padding: 0 0 40px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-main #books .books__container {
+#books .books__container {
   width: 90%;
   display: grid;
   gap: 50px;
   grid-template-columns: 300px 1fr;
 }
-main #books .books__container .book__categories {
+#books .books__container .book__categories {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
-main #books .books__container .book__categories h1 {
+#books .books__container .book__categories h1 {
   font-weight: 500;
   color: #344054;
   font-size: 24px;
 }
-main #books .books__container .book__categories .book__categories-rows {
+#books .books__container .book__categories h1 img {
+  display: none;
+}
+#books .books__container .book__categories .book__categories-rows {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-main #books .books__container .book__categories .book__categories-rows .book__categories-row {
+#books .books__container .book__categories .book__categories-rows .book__categories-row {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -1004,7 +1283,7 @@ main #books .books__container .book__categories .book__categories-rows .book__ca
   height: 40px;
   position: relative;
 }
-main #books .books__container .book__categories .book__categories-rows .book__categories-row label {
+#books .books__container .book__categories .book__categories-rows .book__categories-row label {
   width: 100%;
   height: 100%;
   padding-left: 14px;
@@ -1013,7 +1292,7 @@ main #books .books__container .book__categories .book__categories-rows .book__ca
   font-weight: 500;
   cursor: pointer;
 }
-main #books .books__container .book__categories .book__categories-rows .book__categories-row input {
+#books .books__container .book__categories .book__categories-rows .book__categories-row input {
   position: absolute;
   right: 14px;
   top: 50%;
@@ -1025,26 +1304,26 @@ main #books .books__container .book__categories .book__categories-rows .book__ca
   border-radius: 6px;
   transition: 0.4s;
 }
-main #books .books__container .book__categories .book__categories-rows .book__categories-row input:checked {
+#books .books__container .book__categories .book__categories-rows .book__categories-row input:checked {
   background-color: #0b84bc;
 }
-main #books .books__container .book__categories .book__categories-rows .book__categories-row input:checked::before {
+#books .books__container .book__categories .book__categories-rows .book__categories-row input:checked::before {
   content: "✓";
   color: white;
   display: block;
   text-align: center;
   line-height: 20px;
 }
-main #books .books__container .book__categories .book__categories-rows .book__categories-row input[type=checkbox] {
+#books .books__container .book__categories .book__categories-rows .book__categories-row input[type=checkbox] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
-main #books .books__container .book__categories .book__categories-rows .category-active {
+#books .books__container .book__categories .book__categories-rows .category-active {
   color: #0b84bc;
   border-color: #0b84bc;
 }
-main #books .books__container .book__categories button {
+#books .books__container .book__categories button {
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -1053,144 +1332,166 @@ main #books .books__container .book__categories button {
   color: #0b84bc;
   transition: 0.4s;
 }
-main #books .books__container .book__categories button:hover {
+#books .books__container .book__categories button:hover {
   opacity: 0.7;
 }
-main #books .books__container .book__list {
+#books .books__container .book__list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 40px;
+}
+#books .books__container .book__list .book__products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 24px;
 }
-main #books .books__container .book__list .book__product {
-  border-radius: 10px;
-  padding: 8px 10px;
-  background-color: #fcfcfc;
-  display: flex;
-  height: -moz-fit-content;
-  height: fit-content;
-  border: 2px solid #f2f4f7;
-  flex-direction: column;
-  align-items: center;
-}
-main #books .books__container .book__list .book__product .book__product-container {
-  width: 173px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-}
-main #books .books__container .book__list .book__product .book__product-container .book__product-image {
-  position: relative;
-}
-main #books .books__container .book__list .book__product .book__product-container .book__product-image .book__product-actions {
-  position: absolute;
-  top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-}
-main #books .books__container .book__list .book__product .book__product-container .book__product-image .book__product-actions p {
-  border-radius: 4px;
-  color: #fff;
-  font-size: 12px;
-  padding: 3px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main #books .books__container .book__list .book__product .book__product-container .book__product-image .book__product-actions .bestseller {
-  background-color: #69ceff;
-}
-main #books .books__container .book__list .book__product .book__product-container .book__product-image .book__product-actions .discount {
-  background-color: #fb4343;
-}
-main #books .books__container .book__list .book__product .book__product-container .book__product-image .book__product-actions svg {
+#books .books__container .book__list > button {
   cursor: pointer;
-  transition: 0.4s;
-  fill: #fff;
-}
-main #books .books__container .book__list .book__product .book__product-container .book__product-image .book__product-actions svg:hover {
-  fill: #f24e1e;
-}
-main #books .books__container .book__list .book__product .book__product-container .book__product-image img {
-  border-radius: 10px;
-}
-main #books .books__container .book__list .book__product .book__product-container .book__product-content {
+  align-self: center;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-main #books .books__container .book__list .book__product .book__product-container .book__product-content h1 {
-  font-size: 12px;
-}
-main #books .books__container .book__list .book__product .book__product-container .book__product-content .book__product-prices {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-}
-main #books .books__container .book__list .book__product .book__product-container .book__product-content .book__product-prices .book__product-price {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-main #books .books__container .book__list .book__product .book__product-container .book__product-content .book__product-prices .book__product-price div {
-  display: flex;
-}
-main #books .books__container .book__list .book__product .book__product-container .book__product-content .book__product-prices .book__product-price .underlined-text {
-  font-size: 10px;
-  text-decoration: line-through;
-}
-main #books .books__container .book__list .book__product .book__product-container .book__product-content .book__product-prices .book__product-price .discount {
-  color: #fb4343;
-  font-weight: 600;
-}
-main #books .books__container .book__list .book__product .book__product-container .book__product-content .book__product-prices .book__product-rate {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-}
-main #books .books__container .book__list .book__product .book__product-container .book__product-content .book__product-prices .book__product-rate span {
-  font-size: 12px;
-}
-main #books .books__container .book__list .book__product .book__product-container button {
-  overflow: hidden;
-  width: 100%;
-  display: flex;
-  opacity: 0;
-  visibility: hidden;
-  height: 0;
+  width: 279px;
+  height: 38px;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-family: Poppins;
-  cursor: pointer;
-  background-color: #0b84bc;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  transition: 0.4s;
-  border: 1px solid transparent;
-}
-main #books .books__container .book__list .book__product .book__product-container button svg {
-  width: 20px;
-  height: 20px;
-  fill: #fff;
-  transition: 0.4s;
-}
-main #books .books__container .book__list .book__product .book__product-container button:hover {
-  border-color: #0b84bc;
-  background-color: transparent;
   color: #0b84bc;
-  opacity: 0.7;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #0b84bc;
+  background-color: transparent;
+  transition: 0.4s;
 }
-main #books .books__container .book__list .book__product .book__product-container button:hover svg {
-  fill: #0b84bc;
+#books .books__container .book__list > button:hover {
+  color: #fff;
+  background-color: #0b84bc;
 }
-main #books .books__container .book__list .book__product .book__product-container:hover button {
-  padding: 17px 30px;
-  opacity: 1;
-  visibility: visible;
+
+@media screen and (max-width: 1000px) {
+  #books {
+    padding: 0 0 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #books .books__container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  #books .books__container .book__categories {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  #books .books__container .book__categories h1 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    color: #0b84bc;
+    font-size: 16px;
+  }
+  #books .books__container .book__categories h1 img {
+    display: block;
+  }
+  #books .books__container .book__categories .book__categories-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  #books .books__container .book__categories .book__categories-rows .book__categories-row {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 6px;
+    border: 1px solid #f8f8f8;
+    align-items: center;
+    height: 40px;
+    position: relative;
+  }
+  #books .books__container .book__categories .book__categories-rows .book__categories-row label {
+    width: 100%;
+    height: 100%;
+    padding-left: 14px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  #books .books__container .book__categories .book__categories-rows .book__categories-row input {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(227, 222, 222, 0.7215686275);
+    border-radius: 6px;
+    transition: 0.4s;
+  }
+  #books .books__container .book__categories .book__categories-rows .book__categories-row input:checked {
+    background-color: #0b84bc;
+  }
+  #books .books__container .book__categories .book__categories-rows .book__categories-row input:checked::before {
+    content: "✓";
+    color: white;
+    display: block;
+    text-align: center;
+    line-height: 20px;
+  }
+  #books .books__container .book__categories .book__categories-rows .book__categories-row input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  #books .books__container .book__categories .book__categories-rows .category-active {
+    color: #0b84bc;
+    border-color: #0b84bc;
+  }
+  #books .books__container .book__categories button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-family: Poppins;
+    font-weight: 500;
+    color: #0b84bc;
+    transition: 0.4s;
+  }
+  #books .books__container .book__categories button:hover {
+    opacity: 0.7;
+  }
+  #books .books__container .book__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  #books .books__container .book__list .book__products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 24px;
+  }
+  #books .books__container .book__list > button {
+    cursor: pointer;
+    align-self: center;
+    display: flex;
+    width: 279px;
+    height: 38px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    font-family: Poppins;
+    color: #0b84bc;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid #0b84bc;
+    background-color: transparent;
+    transition: 0.4s;
+  }
+  #books .books__container .book__list > button:hover {
+    color: #fff;
+    background-color: #0b84bc;
+  }
 }

@@ -1,0 +1,118 @@
+.section {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .section__container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 53px;
+    .section__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h1 {
+        color: $black-color;
+        font-size: 34px;
+        font-weight: 400;
+      }
+      .section__buttons {
+        display: flex;
+        gap: 16px;
+        button {
+          cursor: pointer;
+          background-color: $checkbox-color;
+          border: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          transition: 0.4s;
+          svg {
+            fill: $button-color;
+            transition: 0.4s;
+          }
+          &:hover {
+            background-color: $button-color;
+            svg {
+              fill: $white-color !important;
+            }
+          }
+        }
+      }
+    }
+    .section__bottom {
+      gap: 32px;
+      scroll-behavior: smooth;
+      display: flex;
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .product {
+        flex: 0 0 auto;
+        width: 300px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .section {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .section__container {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      gap: 53px;
+      .section__top {
+        display: flex;
+        justify-content: space-between;
+        h1 {
+          color: $black-color;
+          font-size: 20px;
+          font-weight: 400;
+        }
+        .section__buttons {
+          display: flex;
+          gap: 16px;
+          button {
+            cursor: pointer;
+            background-color: $checkbox-color;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            transition: 0.4s;
+            svg {
+              fill: $button-color;
+              transition: 0.4s;
+            }
+            &:hover {
+              background-color: $button-color;
+              svg {
+                fill: $white-color !important;
+              }
+            }
+          }
+        }
+      }
+      .section__bottom {
+        width: 100%;
+        gap: 32px;
+        .product {
+          width: 250px;
+        }
+      }
+    }
+  }
+}

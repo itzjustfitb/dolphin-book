@@ -1,0 +1,138 @@
+.product {
+  border-radius: 10px;
+  padding: 8px 0px;
+  background-color: $card-color;
+  display: flex;
+  height: fit-content;
+  border: 2px solid $border-color;
+  flex-direction: column;
+  align-items: center;
+  .product-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    .product-image {
+      width: 100%;
+      position: relative;
+      .product-actions {
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        p {
+          border-radius: 4px;
+          color: $white-color;
+          font-size: 12px;
+          padding: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .bestseller {
+          background-color: $primary-color;
+        }
+        .discount {
+          background-color: $red-color;
+        }
+        svg {
+          cursor: pointer;
+          transition: 0.4s;
+          fill: $white-color;
+          &:hover {
+            fill: $like-color;
+          }
+        }
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+    .product-content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      h1 {
+        font-size: 12px;
+      }
+      .product-prices {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        .product-price {
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+          div {
+            display: flex;
+          }
+          .underlined-text {
+            font-size: 10px;
+            text-decoration: line-through;
+          }
+          .discount {
+            color: $red-color;
+            font-weight: 600;
+          }
+        }
+        .product-rate {
+          display: flex;
+          align-items: center;
+          gap: 3px;
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    button {
+      overflow: hidden;
+      width: 100%;
+      display: flex;
+      opacity: 0;
+      visibility: hidden;
+      height: 0;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      font-family: $primary-font;
+      cursor: pointer;
+      background-color: $button-color;
+      color: $white-color;
+      border: none;
+      border-radius: 4px;
+      transition: 0.4s;
+      border: 1px solid transparent;
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: $white-color;
+        transition: 0.4s;
+      }
+      &:hover {
+        border-color: $button-color;
+        background-color: transparent;
+        color: $button-color;
+        opacity: 0.7;
+        svg {
+          fill: $button-color;
+        }
+      }
+    }
+    &:hover {
+      button {
+        padding: 17px 30px;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
