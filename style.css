@@ -107,10 +107,6 @@ section {
   display: block;
 }
 
-body {
-  line-height: 1;
-}
-
 ol,
 ul {
   list-style: none;
@@ -849,18 +845,19 @@ header .header__container #burger-menu {
 }
 #auth .auth__container {
   width: 100%;
-  display: flex;
+  display: grid;
   align-items: center;
-  height: 100vh;
+  grid-template-columns: 60% 40%;
+  min-height: 100vh;
 }
 #auth .auth__container .auth__logo {
   height: 100%;
-  width: 60%;
   -webkit-clip-path: polygon(0 0, 100% 0%, 54% 100%, 0% 100%);
           clip-path: polygon(0 0, 100% 0%, 54% 100%, 0% 100%);
   background-color: #69ceff;
   display: flex;
   align-items: center;
+  position: relative;
 }
 #auth .auth__container .auth__logo img {
   width: 500px;
@@ -870,7 +867,7 @@ header .header__container #burger-menu {
   transform: rotate(15deg);
 }
 #auth .auth__container .auth__login {
-  height: 100%;
+  padding: 20px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -878,23 +875,30 @@ header .header__container #burger-menu {
   gap: 100px;
 }
 #auth .auth__container .auth__login form {
+  width: 70%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 14px;
 }
 #auth .auth__container .auth__login form nav {
   display: none;
 }
 #auth .auth__container .auth__login form .form-inputs {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+#auth .auth__container .auth__login form .form-inputs .form-seperator {
+  display: flex;
+  gap: 10px;
 }
 #auth .auth__container .auth__login form .form-inputs .form-input {
   display: flex;
   flex-direction: column;
   gap: 7px;
-  width: 400px;
+  width: 100%;
 }
 #auth .auth__container .auth__login form .form-inputs .form-input label {
   font-weight: 500;
@@ -915,6 +919,7 @@ header .header__container #burger-menu {
   color: #fb4343;
 }
 #auth .auth__container .auth__login form .form-actions {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -961,6 +966,7 @@ header .header__container #burger-menu {
   color: #0b84bc;
 }
 #auth .auth__container .auth__login form button {
+  width: 100%;
   margin-top: 20px;
   cursor: pointer;
   background-color: #0b84bc;
@@ -977,6 +983,7 @@ header .header__container #burger-menu {
   opacity: 0.7;
 }
 #auth .auth__container .auth__login form > a {
+  width: 100%;
   color: #0b84bc;
   text-align: end;
   transition: 0.4s;
@@ -985,8 +992,10 @@ header .header__container #burger-menu {
   color: #4e4e4e;
 }
 #auth .auth__container .auth__login > a {
-  margin-left: auto;
   text-decoration: none;
+  display: flex;
+  justify-content: end;
+  width: 70%;
 }
 #auth .auth__container .auth__login > a button {
   cursor: pointer;
@@ -999,69 +1008,50 @@ header .header__container #burger-menu {
   border-radius: 50%;
 }
 
-@media screen and (max-width: 1200px) {
-  #auth .auth__container .auth__logo {
-    width: 50%;
-  }
-}
 @media screen and (max-width: 1000px) {
   .authentication header,
   .authentication footer {
     display: flex;
   }
   #auth {
-    padding: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   #auth .auth__container {
     width: 100%;
-    display: flex;
+    display: grid;
     align-items: center;
-    height: -moz-fit-content;
-    height: fit-content;
-    justify-content: center;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
   }
   #auth .auth__container .auth__logo {
-    height: 100%;
-    width: 50%;
-    -webkit-clip-path: polygon(0 0, 100% 0%, 54% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0%, 54% 100%, 0% 100%);
-    background-color: rebeccapurple;
-    background-color: #69ceff;
     display: none;
-    align-items: center;
-  }
-  #auth .auth__container .auth__logo img {
-    width: 500px;
-    height: 500px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    transform: rotate(15deg);
   }
   #auth .auth__container .auth__login {
-    height: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+  }
+  #auth .auth__container .auth__login form {
     width: 90%;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    gap: 50px;
-  }
-  #auth .auth__container .auth__login form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: 14px;
   }
   #auth .auth__container .auth__login form nav {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 44px;
     margin-bottom: 18px;
   }
   #auth .auth__container .auth__login form nav p {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1077,6 +1067,7 @@ header .header__container #burger-menu {
     border-color: #0b84bc;
   }
   #auth .auth__container .auth__login form .form-inputs {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -1101,7 +1092,12 @@ header .header__container #burger-menu {
   #auth .auth__container .auth__login form .form-inputs .form-input input:focus {
     outline-color: #f2f4f7;
   }
+  #auth .auth__container .auth__login form .form-inputs .form-input p {
+    margin-top: 7px;
+    color: #fb4343;
+  }
   #auth .auth__container .auth__login form .form-actions {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1148,6 +1144,7 @@ header .header__container #burger-menu {
     color: #0b84bc;
   }
   #auth .auth__container .auth__login form button {
+    width: 100%;
     margin-top: 20px;
     cursor: pointer;
     background-color: #0b84bc;
@@ -1164,6 +1161,7 @@ header .header__container #burger-menu {
     opacity: 0.7;
   }
   #auth .auth__container .auth__login form > a {
+    width: 100%;
     color: #0b84bc;
     text-align: end;
     transition: 0.4s;
@@ -1172,9 +1170,10 @@ header .header__container #burger-menu {
     color: #4e4e4e;
   }
   #auth .auth__container .auth__login > a {
-    width: 100%;
-    margin-left: auto;
     text-decoration: none;
+    display: flex;
+    justify-content: end;
+    width: 90%;
   }
   #auth .auth__container .auth__login > a button {
     cursor: pointer;
@@ -1182,12 +1181,9 @@ header .header__container #burger-menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 29px;
-    height: 29px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-  }
-  #auth .auth__container .auth__login > a button img {
-    width: 20px;
   }
 }
 #categories-subheader {
