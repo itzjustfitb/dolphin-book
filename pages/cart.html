@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/site-logo.png" />
+    <title>Dolphin Book</title>
+
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header__container">
+        <a href="#">
+          <img src="./assets/site-logo.png" alt="Site Logo" />
+        </a>
+        <nav>
+          <a href="#">Haqqımızda</a>
+          <a href="#">Kitablar</a>
+          <a href="#">Oyuncaqlar</a>
+          <a href="#">Endirimlər</a>
+          <a href="#">Bestseller</a>
+          <a href="#">Əlaqə</a>
+        </nav>
+        <div class="header__buttons">
+          <button>Giriş</button>
+          <button>Qeydiyyat</button>
+        </div>
+        <img
+          id="burger-menu"
+          src="./assets/burger-menu.svg"
+          alt="Burger menu"
+        />
+      </div>
+    </header>
+    <div class="subheader">
+      <div class="subheader__container">
+        <div class="subheader__empty"></div>
+        <div class="subheader__search">
+          <input type="text" placeholder="Axtar" />
+          <img src="./assets/search-icon.svg" alt="Search Logo" />
+        </div>
+        <div class="subheader__actions">
+          <img src="./assets/heart-icon.svg" alt="Heart Logo" />
+          <img src="./assets/user-icon.svg" alt="User Logo" />
+          <div>
+            <img src="./assets/bag-icon.svg" alt="Bag Logo" />
+            <span>100</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <section id="cart">
+        <div class="cart__container">
+          <div class="cart__top">
+            <div class="cart__row">
+              <img
+                src="https://imageio.forbes.com/specials-images/imageserve/5d35eacaf1176b0008974b54/2020-Chevrolet-Corvette-Stingray/0x0.jpg?format=jpg&crop=4560,2565,x790,y784,safe&width=960"
+                alt=""
+              />
+              <div>
+                <div class="cart__row-content">
+                  <h1>Book name</h1>
+                  <div>
+                    <span class="cart__rate">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="15"
+                        height="14"
+                        viewBox="0 0 15 14"
+                        fill="none"
+                      >
+                        <path
+                          d="M7.5 0L9.18386 5.18237H14.6329L10.2245 8.38525L11.9084 13.5676L7.5 10.3647L3.09161 13.5676L4.77547 8.38525L0.367076 5.18237H5.81614L7.5 0Z"
+                          fill="#FFB800"
+                        />
+                      </svg>
+                      4.5
+                    </span>
+                    <span class="cart__review">
+                      <p>302</p>
+                      <p>review</p>
+                    </span>
+                  </div>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book. 
+                  </p>
+                </div>
+                <div class="cart__row-price">
+                  <div class="cart__row-price-top">
+                    <span
+                      >$
+                      <p>15.90</p></span
+                    >
+                    <span
+                      >$
+                      <p>19.90</p></span
+                    >
+                  </div>
+                  <div class="cart__row-price-bottom">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                  </div>
+                </div>
+              </div>
+              <svg
+                class="cart__remove"
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="20"
+                viewBox="0 0 18 20"
+              >
+                <path
+                  d="M14.9739 10.7146L15.7168 10.818L14.9739 10.7146ZM14.7335 12.4425L15.4763 12.5459L14.7335 12.4425ZM3.26621 12.4425L4.00905 12.3391L3.26621 12.4425ZM3.02574 10.7146L2.2829 10.818L3.02574 10.7146ZM6.41818 18.9255L6.12659 19.6165H6.12659L6.41818 18.9255ZM3.93533 16.0137L4.63932 15.755L3.93533 16.0137ZM14.0643 16.0137L14.7683 16.2723L14.0643 16.0137ZM11.5815 18.9255L11.2899 18.2345L11.5815 18.9255ZM3.32981 7.1791C3.29063 6.76674 2.92459 6.46422 2.51223 6.5034C2.09987 6.54258 1.79735 6.90862 1.83653 7.32098L3.32981 7.1791ZM16.1631 7.32098C16.2023 6.90863 15.8998 6.54258 15.4874 6.5034C15.0751 6.46422 14.709 6.76674 14.6699 7.1791L16.1631 7.32098ZM16.3332 6.16671C16.7474 6.16671 17.0832 5.83092 17.0832 5.41671C17.0832 5.00249 16.7474 4.66671 16.3332 4.66671V6.16671ZM1.6665 4.66671C1.25229 4.66671 0.916504 5.00249 0.916504 5.41671C0.916504 5.83092 1.25229 6.16671 1.6665 6.16671V4.66671ZM6.4165 15.5C6.4165 15.9143 6.75229 16.25 7.1665 16.25C7.58072 16.25 7.9165 15.9143 7.9165 15.5H6.4165ZM7.9165 8.16671C7.9165 7.75249 7.58072 7.41671 7.1665 7.41671C6.75229 7.41671 6.4165 7.75249 6.4165 8.16671H7.9165ZM10.0832 15.5C10.0832 15.9143 10.419 16.25 10.8332 16.25C11.2474 16.25 11.5832 15.9143 11.5832 15.5H10.0832ZM11.5832 8.16671C11.5832 7.75249 11.2474 7.41671 10.8332 7.41671C10.419 7.41671 10.0832 7.75249 10.0832 8.16671H11.5832ZM12.6665 5.41671V6.16671H13.4165V5.41671H12.6665ZM5.33317 5.41671H4.58317V6.16671H5.33317V5.41671ZM14.2311 10.6112L13.9906 12.3391L15.4763 12.5459L15.7168 10.818L14.2311 10.6112ZM4.00905 12.3391L3.76858 10.6112L2.2829 10.818L2.52337 12.5459L4.00905 12.3391ZM8.99984 18.4167C7.59249 18.4167 7.108 18.4025 6.70977 18.2345L6.12659 19.6165C6.87171 19.9309 7.72723 19.9167 8.99984 19.9167V18.4167ZM2.52337 12.5459C2.77932 14.385 2.9195 15.4236 3.23134 16.2723L4.63932 15.755C4.39699 15.0955 4.27582 14.256 4.00905 12.3391L2.52337 12.5459ZM6.70977 18.2345C5.88451 17.8862 5.1081 17.0309 4.63932 15.755L3.23134 16.2723C3.79885 17.8169 4.81377 19.0625 6.12659 19.6165L6.70977 18.2345ZM13.9906 12.3391C13.7239 14.256 13.6027 15.0955 13.3604 15.755L14.7683 16.2723C15.0802 15.4236 15.2204 14.385 15.4763 12.5459L13.9906 12.3391ZM8.99984 19.9167C10.2724 19.9167 11.128 19.9309 11.8731 19.6165L11.2899 18.2345C10.8917 18.4025 10.4072 18.4167 8.99984 18.4167V19.9167ZM13.3604 15.755C12.8916 17.0309 12.1152 17.8862 11.2899 18.2345L11.8731 19.6165C13.1859 19.0625 14.2008 17.8169 14.7683 16.2723L13.3604 15.755ZM3.76858 10.6112C3.56489 9.14759 3.41308 8.05557 3.32981 7.1791L1.83653 7.32098C1.92362 8.23751 2.08099 9.36711 2.2829 10.818L3.76858 10.6112ZM15.7168 10.818C15.9187 9.3671 16.0761 8.23751 16.1631 7.32098L14.6699 7.1791C14.5866 8.05556 14.4348 9.14758 14.2311 10.6112L15.7168 10.818ZM16.3332 4.66671H1.6665V6.16671H16.3332V4.66671ZM7.9165 15.5V8.16671H6.4165V15.5H7.9165ZM11.5832 15.5V8.16671H10.0832V15.5H11.5832ZM11.9165 4.50004V5.41671H13.4165V4.50004H11.9165ZM12.6665 4.66671H5.33317V6.16671H12.6665V4.66671ZM6.08317 5.41671V4.50004H4.58317V5.41671H6.08317ZM8.99984 1.58337C10.6107 1.58337 11.9165 2.88921 11.9165 4.50004H13.4165C13.4165 2.06078 11.4391 0.083374 8.99984 0.083374V1.58337ZM8.99984 0.083374C6.56058 0.083374 4.58317 2.06078 4.58317 4.50004H6.08317C6.08317 2.88921 7.38901 1.58337 8.99984 1.58337V0.083374Z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="cart__bottom">
+            <div>Cəmi: <span>31.80</span>₼</div>
+            <button>Ödəniş et</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer__container">
+        <div class="footer__top">
+          <div class="footer__logo">
+            <img src="./assets/site-logo.png" alt="Site Logo" />
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum
+            </p>
+          </div>
+          <div class="footer__rows">
+            <div class="footer__row">
+              <h1>Kateqoriya</h1>
+              <a href="#">
+                <p>Ən çox satılanlar</p>
+              </a>
+              <a href="#">
+                <p>Yeni kitablar</p>
+              </a>
+              <a href="#">
+                <p>Tutorials</p>
+                <span class="footer__row-new">New</span>
+              </a>
+              <a href="#">
+                <p>Pricing</p>
+              </a>
+              <a href="#">
+                <p>Releases</p>
+              </a>
+            </div>
+            <div class="footer__row">
+              <h1>Kateqoriya</h1>
+              <a href="#">
+                <p>Ən çox satılanlar</p>
+              </a>
+              <a href="#">
+                <p>Yeni kitablar</p>
+              </a>
+              <a href="#">
+                <p>Tutorials</p>
+                <span class="footer__row-new">New</span>
+              </a>
+              <a href="#">
+                <p>Pricing</p>
+              </a>
+              <a href="#">
+                <p>Releases</p>
+              </a>
+            </div>
+            <div class="footer__socials">
+              <h1>Follow us</h1>
+              <div>
+                <a href="#">
+                  <img src="./assets/instagram.svg" alt="" />
+                </a>
+                <a href="#">
+                  <img src="./assets/facebook.svg" alt="" />
+                </a>
+                <a href="#">
+                  <img src="./assets/telegram.svg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">© 2024 Dolphin. All rights reserved.</div>
+      </div>
+    </footer>
+  </body>
+</html>
