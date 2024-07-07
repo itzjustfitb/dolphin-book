@@ -391,6 +391,49 @@ body {
     width: 250px;
   }
 }
+.toast {
+  display: flex;
+  position: fixed;
+  transition: 1s;
+  z-index: 10;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
+  align-items: center;
+  background-color: #fffae6;
+  padding: 20px;
+  width: 390px;
+  gap: 16px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.toast::after {
+  transition: 2s;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border: 3px solid transparent;
+}
+.toast p {
+  color: #303030;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.toast-active {
+  top: 90px;
+}
+
+.toast-timer::after {
+  width: 100%;
+  border-color: #ffab00;
+}
+
 footer {
   display: flex;
   justify-content: center;

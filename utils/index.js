@@ -35,3 +35,27 @@ cartBtn.addEventListener("click", (e) => {
 cartContainer.addEventListener("click", (e) => {
   e.stopPropagation();
 });
+
+const toastContainer = document.querySelector(".toast");
+const products = document.querySelectorAll(".product");
+
+const addToBasket = () => {
+  toastContainer.classList.add("toast-active");
+  setTimeout(() => {
+    toastContainer.classList.add("toast-timer");
+  }, 1000);
+
+  setTimeout(() => {
+    toastContainer.classList.remove("toast-active");
+    toastContainer.classList.remove("toast-timer");
+  }, 3000);
+};
+
+products.forEach((product) => {
+  const basketBtn = product.querySelector(".product-add");
+  if (basketBtn) {
+    basketBtn.addEventListener("click", () => {
+      addToBasket();
+    });
+  }
+});
