@@ -54,8 +54,6 @@ const addToBasket = () => {
 products.forEach((product) => {
   const basketBtn = product.querySelector(".product-add");
   if (basketBtn) {
-    basketBtn.addEventListener("click", () => {
-      addToBasket();
-    });
+    basketBtn.addEventListener("click", addToBasket);
   }
 });
